@@ -1,0 +1,15 @@
+
+<div id="theDiv"></div>
+
+<script>
+function loadThisData(content){
+	console.log('content loaded');
+	window.content = content;
+	document.getElementById('theDiv').innerHTML = content.feed.entry[0].content.$t;
+
+}
+</script>
+
+
+
+<script type="text/javascript" src="http://spreadsheets.google.com/feeds/cells/1305qfk57scKMHibcIbKVhw2sw3VAa3WqiBslFV8jShw/od6/public/basic?alt=json-in-script&callback=loadThisData"  ></script>
